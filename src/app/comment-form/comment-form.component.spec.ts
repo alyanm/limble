@@ -22,17 +22,18 @@ describe('CommentFormComponent', () => {
     expect(component).toBeTruthy();
   });
 
-  it('should notify users mentioned in the comment', () => {
+  it('should notify all users mentioned in the comment', () => {
     const users: User[] = [
       { userID: 1, name: 'Alice' },
       { userID: 2, name: 'Bob' },
+      { userID: 3, name: 'Jeff' },
     ];
     component.users = users;
 
     const comment: Comment = {
       id: 1,
       author: 'Test Author',
-      content: '@Alan: Hello @Alice and @Bob',
+      content: '@Jeff: Hello @Alice and @Bob',
       timestamp: new Date(),
     };
     component.comment = comment;
@@ -41,7 +42,7 @@ describe('CommentFormComponent', () => {
 
     component.findAllMentionsAndNotify();
 
-    expect(component.notifyUser.emit).not.toHaveBeenCalledWith('Alan');
+    expect(component.notifyUser.emit).toHaveBeenCalledWith('Jeff');
     expect(component.notifyUser.emit).toHaveBeenCalledWith('Alice');
     expect(component.notifyUser.emit).toHaveBeenCalledWith('Bob');
   });
