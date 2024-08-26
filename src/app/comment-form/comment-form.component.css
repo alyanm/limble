@@ -1,0 +1,30 @@
+.message-field {
+    min-width: 600px;
+    height: 200px;
+    margin: 10px;
+  }
+
+  .message-label {
+    color: grey;
+  }
+
+  .button-container {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px; /* Optional: Add some space above the button */
+  }
+
+  .submit-button {
+    background-color: lightgrey;
+    border: none;
+    color: black;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    padding: 10px 24px;
+    border-radius: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added drop shadow */
+  }

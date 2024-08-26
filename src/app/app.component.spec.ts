@@ -17,13 +17,15 @@ describe('AppComponent', () => {
   it(`should have the 'limble' title`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('limble');
+    expect(app.title).toEqual('Limble Comments with Mention support');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, limble');
+    expect(compiled.querySelector('h1')?.textContent).toContain(
+      'Limble Comments with Mention support'
+    );
   });
 });

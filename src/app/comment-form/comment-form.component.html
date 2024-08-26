@@ -1,0 +1,13 @@
+<form (ngSubmit)="onSubmit()">
+    <label class="message-label" for="content">Comment:</label>
+    <div>
+      <textarea id="content" 
+                [(ngModel)]="comment.content" 
+                name="content"
+                class="message-field"
+                (input)="onInput($event)"></textarea>
+    </div>
+    <div class="button-container">
+        <button type="submit" class="submit-button">Add Comment</button>
+      </div>
+</form>

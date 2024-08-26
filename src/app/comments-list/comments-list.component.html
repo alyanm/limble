@@ -1,0 +1,13 @@
+<div
+  *ngFor="let comment of comments; let last = last"
+  class="comment"
+  [ngClass]="{ 'no-border': last }"
+>
+  <span class="comment-content" [innerHTML]="comment.content"></span>
+  <div class="comment-meta">
+    <span class="comment-author">{{ comment.author }} -&nbsp;</span>
+    <span class="comment-timestamp">{{
+      comment.timestamp | date : "short"
+    }}</span>
+  </div>
+</div>
