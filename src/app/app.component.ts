@@ -1,3 +1,4 @@
+import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
@@ -52,6 +53,9 @@ export class AppComponent {
     { userID: 2, name: 'Jeff' },
     { userID: 3, name: 'Bryan' },
     { userID: 4, name: 'Gabbey' },
+    { userID: 5, name: 'Alice' },
+    { userID: 6, name: 'Bob' },
+    { userID: 7, name: 'Charlie' },
   ];
 
   notifyUser(userName: string) {

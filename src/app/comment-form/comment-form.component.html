@@ -1,13 +1,27 @@
 <form (ngSubmit)="onSubmit()">
-    <label class="message-label" for="content">Comment:</label>
-    <div>
-      <textarea id="content" 
-                [(ngModel)]="comment.content" 
-                name="content"
-                class="message-field"
-                (input)="onInput($event)"></textarea>
-    </div>
-    <div class="button-container">
-        <button type="submit" class="submit-button">Add Comment</button>
-      </div>
+  <label class="message-label" for="content">Comment:</label>
+  <div>
+    <textarea
+      id="content"
+      [(ngModel)]="comment.content"
+      name="content"
+      class="message-field"
+      (input)="onInput($event)"
+      (keyup)="onKeyUp($event)"
+    ></textarea>
+  </div>
+  <div
+    class="user-list-container"
+    [ngStyle]="userListStyle"
+    *ngIf="showUserList"
+  >
+    <ul class="user-list">
+      <li *ngFor="let user of filteredUsers" (click)="onSelectUser(user)">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+  <div class="button-container">
+    <button type="submit" class="submit-button">Add Comment</button>
+  </div>
 </form>
