@@ -66,13 +66,6 @@ export class CommentFormComponent {
     }
   }
 
-  /** Swallow the enter key when the user list is up. */
-  onKeyDown(event: KeyboardEvent) {
-    if (event.key === 'Enter' && this.showUserList) {
-      event.preventDefault();
-    }
-  }
-
   /** When a user is selected from the list, paste their name into the message. */
   onSelectUser(user: User) {
     const mentionIndex = this.comment.content.lastIndexOf('@');

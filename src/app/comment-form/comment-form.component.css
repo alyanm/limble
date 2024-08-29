@@ -11,7 +11,7 @@
 .button-container {
   display: flex;
   justify-content: flex-end;
-  margin-top: 10px; /* Optional: Add some space above the button */
+  margin-top: 10px;
 }
 
 .submit-button {
@@ -26,7 +26,7 @@
   cursor: pointer;
   padding: 10px 24px;
   border-radius: 5px;
-  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3); /* Added drop shadow */
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .user-list-container {
