@@ -101,7 +101,7 @@ export class CommentFormComponent {
   /** Check each mention and see if it is in the list of users.
    * If so, call function passed to us for this purpose.
    */
-  private findAllMentionsAndNotify() {
+  public findAllMentionsAndNotify() {
     const matches = this.comment.content.match(MentionPattern);
     if (matches) {
       matches.forEach((match) => {
