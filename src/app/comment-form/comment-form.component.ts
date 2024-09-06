@@ -44,7 +44,7 @@ export class CommentFormComponent {
       this.showUserList &&
       this.filteredUsers.length > 0
     ) {
-      console.debugs(
+      console.debug(
         'Enter key pressed, selecting first user in list.',
         this.filteredUsers[0]
       );
